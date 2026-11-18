@@ -12,21 +12,33 @@ The visual direction is taken from **Neon Runner** (see [Credits and references]
 
 ## Contents
 
-1. [Navigation map](#navigation-map)
-2. [Design system](#design-system)
-3. [Motion system](#motion-system)
-4. [Screen 1 - Title](#screen-1---title)
-5. [Screen 2 - Main Menu](#screen-2---main-menu)
-6. [Screen 3 - Mode Select](#screen-3---mode-select)
-7. [Screen 4 - Loadout](#screen-4---loadout)
-8. [Screen 5 - Shop](#screen-5---shop)
-9. [Screen 6 - Leaderboard](#screen-6---leaderboard)
-10. [Screen 7 - Achievements](#screen-7---achievements)
-11. [Screen 8 - Settings (with Credits popup)](#screen-8---settings-with-credits-popup)
-12. [Screen 9 - Pause](#screen-9---pause)
-13. [Screen 10 - Results](#screen-10---results)
-14. [Supporting screen - Run placeholder](#supporting-screen---run-placeholder)
-15. [Credits and references](#credits-and-references)
+1. [Setup and run instructions](#setup-and-run-instructions)
+2. [Navigation map](#navigation-map)
+3. [Design system](#design-system)
+4. [Motion system](#motion-system)
+5. [Screen 1 - Title](#screen-1---title)
+6. [Screen 2 - Main Menu](#screen-2---main-menu)
+7. [Screen 3 - Mode Select](#screen-3---mode-select)
+8. [Screen 4 - Loadout](#screen-4---loadout)
+9. [Screen 5 - Shop](#screen-5---shop)
+10. [Screen 6 - Leaderboard](#screen-6---leaderboard)
+11. [Screen 7 - Achievements](#screen-7---achievements)
+12. [Screen 8 - Settings (with Credits popup)](#screen-8---settings-with-credits-popup)
+13. [Screen 9 - Pause](#screen-9---pause)
+14. [Screen 10 - Results](#screen-10---results)
+15. [Supporting screen - Run placeholder](#supporting-screen---run-placeholder)
+16. [Credits and references](#credits-and-references)
+
+---
+
+## Setup and run instructions
+
+1. Clone the repository and open the folder in **Unity 6000.3.24f1 LTS** via *Unity Hub > Add > Add project from disk*. (`Library/`, `Temp/`, `Logs/` and `obj/` are not committed; Unity regenerates them on first open.)
+2. Make sure **TextMeshPro** is installed (*Window > Package Manager > TextMeshPro*). If prompted, click **Import TMP Essentials**.
+3. Open the scene `Assets/Scenes/SampleScene.unity`.
+4. If the scene has no `NeonCanvas` object, run **Tools > Build Neon UI** from the menu bar. This editor script generates the whole 10-screen UI, wires up every button, and adds an EventSystem if one is missing.
+5. In the **Game** view, choose a portrait resolution of **1080 x 1920**.
+6. Press **Play**. Tap/click anywhere on the Title screen to start.
 
 ---
 
@@ -361,4 +373,3 @@ Not one of the 10 screens. It is a stand-in for the gameplay scene, so Pause and
 | ![Neon Runner results](images/reference/neon-runner-results.jpg) | Results |
 
 **What I changed relative to the reference:** different game name and logo treatment, a restructured main-menu hierarchy (PLAY dominant), added Mode Select, Loadout, Settings and Pause screens, bordered boxes generated entirely in code, a different history-based navigation system, and new motion design (screen slide direction, press/release spring, cycle pop, toggle slide).
-
